@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:milza_foods/utils/constants.dart';
 import '../controllers/restaurent_dishes_controller.dart';
-import 'widgets/bottom_nav_bar.dart';
 
 class RestaurentDishes extends StatelessWidget {
   const RestaurentDishes({super.key});
@@ -14,9 +13,8 @@ class RestaurentDishes extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Recommended Dishes'),
+        title: const Text('Dishes'),
       ),
-      bottomNavigationBar: BottomNavigationWidget(),
       body: Obx(
         () {
           if (restaurantDishesController.isLoading.value) {
